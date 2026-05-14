@@ -226,14 +226,18 @@ html{
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.sambutan-text{
-  max-width:550px;
+.sambutan-text {
+  flex: 1;
+  text-align: left; /* Diubah dari 'center' menjadi 'left' */
 }
 
-.sambutan-text h2{
-  font-size:42px;
-  color:#1a2d6d;
-  margin-bottom:20px;
+/* Tambahan (Opsional namun Disarankan) */
+/* Agar judul dan elemen lain di dalamnya juga rapi di kiri */
+.sambutan-text h2,
+.sambutan-text h3,
+.sambutan-text p,
+.sambutan-text span {
+  text-align: left;
 }
 
 .sambutan-text p{
