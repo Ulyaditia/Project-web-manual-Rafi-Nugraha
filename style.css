@@ -209,52 +209,78 @@ html{
 }
 
 /* ================= SAMBUTAN ================= */
-
-.sambutan{
-  padding:100px 7%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:70px;
-  background:#fff;
-  flex-wrap:wrap;
+.sambutan {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 10%;
+  background-color: #f5f7fa;
+  flex-wrap: wrap;
 }
 
-.sambutan-img img{
-  width:500px;
-  border-radius:25px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+.sambutan-img {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sambutan-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .sambutan-text {
   flex: 1;
-  text-align: left; /* Diubah dari 'center' menjadi 'left' */
+  min-width: 300px;
 }
 
-/* Tambahan (Opsional namun Disarankan) */
-/* Agar judul dan elemen lain di dalamnya juga rapi di kiri */
+/* KUNCI UTAMA: semua teks di dalam sambutan-text rata kiri */
 .sambutan-text h2,
-.sambutan-text h3,
 .sambutan-text p,
+.sambutan-text h3,
 .sambutan-text span {
-  text-align: left;
+  text-align: left !important; /* dipaksa ke kiri */
+  margin-left: 0;
+  margin-right: auto;
 }
 
-.sambutan-text p{
-  font-size:18px;
-  line-height:1.9;
-  margin-bottom:15px;
+.sambutan-text h2 {
+  font-size: 32px;
+  color: #1a3c5e;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
 }
 
-.sambutan-text h3{
-  margin-top:30px;
-  font-size:24px;
+.sambutan-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; /* garis bawah juga ikut ke kiri */
+  width: 80px;
+  height: 4px;
+  background-color: #e67e22;
 }
 
-.sambutan-text span{
-  font-size:18px;
+.sambutan-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
 }
 
+.sambutan-text h3 {
+  font-size: 20px;
+  color: #1a3c5e;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.sambutan-text span {
+  font-size: 14px;
+  color: #e67e22;
+  font-weight: 500;
+}
 /* ================= PROFIL ================= */
 
 .profil{
